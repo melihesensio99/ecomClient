@@ -34,7 +34,9 @@ export class AuthGuard implements CanActivate {
       this.toastrService.message("Oturum açmanız gerekiyor!", "Yetkisiz Erişim!", {
         messageType: ToastrMessageType.Warning,
         position: ToastrPosition.TopRight
-      })
+      });
+      this.spinner.hide(SpinnerType.BallAtom);
+      return false;
     }
 
 

@@ -28,6 +28,7 @@ export class AuthService {
   }
 
   get isAdmin(): boolean {
+    if (!this.isAuthenticated) return false;
     const token: string = localStorage.getItem("accessToken");
     if (!token) return false;
     const decodeToken = this.jwtHelper.decodeToken(token);

@@ -72,6 +72,24 @@ A premium, fully-featured e-commerce frontend built with **Angular 14**, providi
 ---
 
 ## 📸 Preview
-*(Detailed screenshots and demo content coming soon)*
+
+### 🏠 User Facing Pages
+<p align="center">
+  <img src="screenshots/home.png" width="48%" alt="Home Page" />
+  <img src="screenshots/register.png" width="48%" alt="Register Page" />
+</p>
+<p align="center">
+  <img src="screenshots/login.png" width="48%" alt="Login Page" />
+</p>
+
+### 🛡️ Admin Management
+<p align="center">
+  <img src="screenshots/dashboard.png" width="100%" alt="Admin Dashboard" />
+</p>
+<p align="center">
+  <img src="screenshots/products.png" width="100%" alt="Products Management" />
+</p>
+
+---
 
 Developed with ❤️ by [Melih Esen](https://github.com/melihesensio99)

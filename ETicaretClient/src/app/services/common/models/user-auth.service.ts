@@ -12,11 +12,11 @@ import { HttpClientService } from '../http-client.service';
 export class UserAuthService {
   constructor(private httpClientService: HttpClientService, private toastrService: CustomToastrService) { }
 
-  async login(userNameOrEmail: string, password: string, callBackFunction?: () => void): Promise<any> {
+  async login(usernameOrEmail: string, password: string, callBackFunction?: () => void): Promise<any> {
     const observable: Observable<any | TokenResponse> = this.httpClientService.post<any | TokenResponse>({
       controller: "auth",
       action: "login"
-    }, { userNameOrEmail, password })
+    }, { usernameOrEmail, password })
 
     try {
       const tokenResponse: TokenResponse = await firstValueFrom(observable) as TokenResponse;
