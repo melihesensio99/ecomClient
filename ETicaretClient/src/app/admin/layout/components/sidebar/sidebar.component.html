@@ -1,0 +1,43 @@
+<mat-list role="list" class="h-100 sidebar-list p-0">
+  <div class="sidebar-header pb-4 border-bottom">
+    <div class="brand">
+      <mat-icon>shopping_bag</mat-icon>
+      <span>E-Ticaret</span>
+    </div>
+  </div>
+
+  <div class="nav-links mt-4 px-3">
+    <a mat-list-item routerLink="/admin" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+      <mat-icon>grid_view</mat-icon> <span>Dashboard</span>
+    </a>
+    <a mat-list-item routerLink="products" routerLinkActive="active-link">
+      <mat-icon>inventory</mat-icon> <span>Ürünler</span>
+    </a>
+    <a mat-list-item routerLink="orders" routerLinkActive="active-link">
+      <mat-icon>list_alt</mat-icon> <span>Siparişler</span>
+    </a>
+    <a mat-list-item routerLink="customers" routerLinkActive="active-link">
+      <mat-icon>people_outline</mat-icon> <span>Müşteriler</span>
+    </a>
+
+    <!-- Auth Section -->
+    <ng-container *ngIf="authService.isAdmin">
+      <div class="sidebar-spacer my-4 border-top"></div>
+      <a mat-list-item routerLink="roles" routerLinkActive="active-link">
+        <mat-icon>verified_user</mat-icon> <span>Rol Yönetimi</span>
+      </a>
+      <a mat-list-item routerLink="users" routerLinkActive="active-link">
+        <mat-icon>assignment_ind</mat-icon> <span>Kullanıcılar</span>
+      </a>
+      <a mat-list-item routerLink="authorize-menu" routerLinkActive="active-link">
+        <mat-icon>terminal</mat-icon> <span>Yetkilendirme</span>
+      </a>
+    </ng-container>
+  </div>
+
+  <div class="sidebar-footer mt-auto p-3 bg-light bg-opacity-10 border-top">
+    <a mat-button class="w-100 text-secondary" routerLink="">
+      <mat-icon class="me-2 small-icon">public</mat-icon> <span class="small fw-medium">Mağazayı Görüntüle</span>
+    </a>
+  </div>
+</mat-list>

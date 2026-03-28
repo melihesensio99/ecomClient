@@ -1,0 +1,21 @@
+<div class="roles-page p-2">
+  <div class="mb-4 bg-white p-3 rounded-4 shadow-sm border-0 d-flex align-items-center">
+    <mat-icon class="text-primary me-2">admin_panel_settings</mat-icon>
+    <div>
+      <h4 class="fw-bold mb-0 text-primary">Rol Yönetimi</h4>
+      <p class="text-muted small mb-0">Sistem rollerini oluşturun ve tanımlayın.</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- Rol Ekleme -->
+    <div class="col-lg-4">
+      <app-create (createdRole)="createdRole($event)"></app-create>
+    </div>
+
+    <!-- Rol Listesi -->
+    <div class="col-lg-8">
+      <app-list #list (onEditRole)="editRole($event)"></app-list>
+    </div>
+  </div>
+</div>

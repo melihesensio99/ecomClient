@@ -1,0 +1,24 @@
+.admin-container {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.admin-left {
+  width: 260px;
+  background: #0f172a;
+  border: none;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+mat-drawer-content {
+  background-color: #f8fafc; // Slate 50
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  flex: 1;
+  overflow-y: auto;
+}

@@ -1,0 +1,19 @@
+<mat-toolbar class="admin-header border-bottom bg-white h-auto py-2">
+  <div class="container-fluid d-flex align-items-center justify-content-between px-3">
+    <div class="breadcrumb d-flex align-items-center gap-2">
+      <span class="text-secondary small fw-medium">Yönetim</span>
+      <mat-icon class="text-muted small-icon">chevron_right</mat-icon>
+      <span class="text-dark fw-semibold small">Panel</span>
+    </div>
+
+    <div class="actions d-flex align-items-center gap-2">
+      <button mat-icon-button class="text-secondary" matTooltip="Bildirimler">
+        <mat-icon matBadge="2" matBadgeColor="primary" matBadgeSize="small">notifications_none</mat-icon>
+      </button>
+      <div class="divider mx-2"></div>
+      <button mat-button class="text-secondary hover-dark" routerLink="/">
+        <mat-icon class="me-1">open_in_new</mat-icon> <span class="small fw-medium">Mağazaya Git</span>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,21 @@
+<mat-card class="role-create-card border-0 shadow-sm rounded-4 p-4">
+  <div class="mb-4">
+    <h5 class="fw-bold text-primary mb-1">Yeni Rol Ekle</h5>
+    <p class="text-muted small">Sistem yetkilerini tanımlamak için bir rol ismi girin.</p>
+  </div>
+
+  <mat-form-field appearance="outline" class="w-100 mb-3">
+    <mat-label>Rol İsmi</mat-label>
+    <input matInput #roleName placeholder="Örn: Editör, Kurye vb.">
+    <mat-icon matSuffix class="text-muted">security</mat-icon>
+  </mat-form-field>
+
+  <div class="d-flex justify-content-end">
+    <button mat-flat-button color="primary" class="rounded-pill px-4 w-100" (click)="create(roleName)" *ngIf="!selectedRoleId">
+      <mat-icon class="me-1">add_moderator</mat-icon> Rolü Kaydet
+    </button>
+    <button mat-flat-button color="accent" class="rounded-pill px-4 w-100" (click)="update(roleName)" *ngIf="selectedRoleId">
+      <mat-icon class="me-1">edit</mat-icon> Rolü Güncelle
+    </button>
+  </div>
+</mat-card>

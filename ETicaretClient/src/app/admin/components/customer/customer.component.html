@@ -1,0 +1,47 @@
+<div class="customer-page">
+  <div class="mb-4 bg-white p-3 rounded-4 shadow-sm border-0 d-flex align-items-center">
+    <mat-icon class="text-primary me-2">people</mat-icon>
+    <div>
+      <h4 class="fw-bold mb-0 text-primary">Kayıtlı Müşteriler</h4>
+      <p class="text-muted small mb-0">Sistemdeki tüm kayıtlı kullanıcıları buradan görebilirsiniz.</p>
+    </div>
+  </div>
+
+  <div class="card shadow-sm border-0 p-4 rounded-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h5 class="mb-0 text-dark fw-bold">Müşteri Listesi</h5>
+      <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 fw-normal">{{ users.length }} Adet Müşteri</span>
+    </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover align-middle">
+      <thead class="table-light text-muted">
+        <tr>
+          <th>Ad Soyad</th>
+          <th>Kullanıcı Adı</th>
+          <th>E-Posta Adresi</th>
+          <th>İki Adımlı Doğrulama</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>
+            <div class="d-flex align-items-center">
+              <div class="avatar bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 40px; height: 40px;">
+                {{ user.userName | slice:0:1 | uppercase }}
+              </div>
+              <span class="fw-medium">{{ user.nameSurname }}</span>
+            </div>
+          </td>
+          <td>{{ user.userName }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <span class="badge" [ngClass]="user.twoFactorEnabled ? 'bg-success' : 'bg-warning text-dark'">
+              {{ user.twoFactorEnabled ? 'Aktif' : 'Pasif' }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

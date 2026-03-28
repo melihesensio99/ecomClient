@@ -1,0 +1,36 @@
+<div class="p-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h3 class="fw-bold mb-0">Yetkilendirme Menüsü</h3>
+    <span class="text-muted">Sistemdeki tüm endpoint'lere rol bazlı yetki atayabilirsiniz.</span>
+  </div>
+
+  <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel *ngFor="let menu of menuData" class="mb-3 rounded-3 shadow-sm border-0">
+      <mat-expansion-panel-header class="py-3">
+        <mat-panel-title class="fw-bold text-primary">
+          <mat-icon class="me-2">folder_open</mat-icon> {{menu.name}}
+        </mat-panel-title>
+        <mat-panel-description class="small text-muted">
+          {{menu.actions.length}} Adet İşlem Tanımlı
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-list>
+        <mat-list-item *ngFor="let action of menu.actions" class="border-bottom py-2">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex align-items-center">
+              <mat-icon class="text-secondary me-3">api</mat-icon>
+              <div>
+                <div class="fw-medium">{{action.name}}</div>
+                <div class="small text-muted">{{action.code}}</div>
+              </div>
+            </div>
+            <button mat-flat-button color="primary" class="rounded-pill px-4" (click)="assignRole(action.code, action.name, menu.name)">
+              <mat-icon class="me-1">vpn_key</mat-icon> Rol Ata
+            </button>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

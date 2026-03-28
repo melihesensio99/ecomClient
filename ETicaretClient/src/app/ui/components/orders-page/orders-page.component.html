@@ -1,0 +1,41 @@
+<div class="container my-5">
+  <div class="card shadow border-0 rounded-4 p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="fw-bold mb-0 text-dark">Siparişlerim</h3>
+      <span class="badge bg-primary fs-6 py-2 px-3 rounded-pill">{{ orders.length }} Siparişiniz Bulunuyor</span>
+    </div>
+
+    <div class="text-center py-5" *ngIf="orders.length === 0">
+      <div class="display-1 text-muted mb-3">📦</div>
+      <h5 class="text-muted">Henüz hiç siparişiniz bulunmamaktadır.</h5>
+      <a routerLink="/products" class="btn btn-primary mt-3 px-4 py-2 rounded-pill">Hemen Alışverişe Başla</a>
+    </div>
+
+    <div class="table-responsive" *ngIf="orders.length > 0">
+      <table class="table table-hover align-middle border-top">
+        <thead class="table-light text-muted">
+          <tr>
+            <th>Sipariş Kodu</th>
+            <th>Tarih</th>
+            <th>Toplam Tutar</th>
+            <th class="text-center">Sipariş Durumu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>
+              <span class="fw-bold text-primary">#{{ order.orderCode }}</span>
+            </td>
+            <td>{{ order.createdDate | date:'dd/MM/yyyy HH:mm' }}</td>
+            <td class="fw-medium text-success">{{ order.totalPrice | currency:'TRY':'symbol':'1.2-2' }} ₺</td>
+            <td class="text-center">
+              <span class="badge w-100 py-2 rounded-pill shadow-sm" [ngClass]="order.completed ? 'bg-success' : 'bg-warning text-dark'">
+                {{ order.completed ? 'Tamamlandı' : 'Hazırlanıyor' }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

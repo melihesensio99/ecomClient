@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Teslimat Adresi Bilgileri</h1>
+<div mat-dialog-content>
+  <p class="text-muted">Lütfen siparişin teslim edileceği açık adresi belirtiniz.</p>
+
+  <div class="mb-3 mt-2">
+    <label class="form-label fw-bold">İl Seçiniz</label>
+    <select class="form-select" #city>
+      <option value="İstanbul">İstanbul</option>
+      <option value="Ankara">Ankara</option>
+      <option value="İzmir">İzmir</option>
+      <option value="Bursa">Bursa</option>
+      <option value="Antalya">Antalya</option>
+    </select>
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label fw-bold">İlçe</label>
+    <input type="text" class="form-control" placeholder="Örn: Kadıköy" #district>
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label fw-bold">Açık Adres</label>
+    <textarea class="form-control" rows="3" placeholder="Sokak, Mahalle, Bina No, Kapı No vs." #address></textarea>
+  </div>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-end pb-3 pe-3">
+  <button mat-button color="warn" (click)="close()">İptal Et</button>
+  <button mat-flat-button color="primary" class="ms-2" [mat-dialog-close]="{ city: city.value, district: district.value, address: address.value }" cdkFocusInitial (click)="complete()">Siparişi Onayla</button>
+</div>
