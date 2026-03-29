@@ -87,9 +87,21 @@ A premium, fully-featured e-commerce frontend built with **Angular 14**, providi
   <img src="screenshots/dashboard.png" width="100%" alt="Admin Dashboard" />
 </p>
 <p align="center">
-  <img src="screenshots/products.png" width="100%" alt="Products Management" />
+  <img src="screenshots/products.png" width="90%" alt="Products Management" />
+</p>
+
+### 🛒 Order & Basket System
+<p align="center">
+  <img src="screenshots/basket.png" width="48%" alt="Shopping Basket" />
+  <img src="screenshots/address.png" width="48%" alt="Shipping Address" />
+</p>
+
+### ⚙️ Advanced Admin Features
+<p align="center">
+  <img src="screenshots/orders.png" width="48%" alt="Order Management" />
+  <img src="screenshots/qrcode.png" width="48%" alt="QR Code Scanning" />
 </p>
 
 ---
 
-Developed with ❤️ by [Melih Esen](https://github.com/melihesensio99)
+Developed by[Melih Esen](https://github.com/melihesensio99)
