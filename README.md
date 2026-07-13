@@ -1,7 +1,19 @@
 # ecomClient
 
+[![Angular](https://img.shields.io/badge/Angular-0F0F11?style=for-the-badge&logo=angular&logoColor=DD0031)](https://angular.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-0F0F11?style=for-the-badge&logo=typescript&logoColor=3178C6)](https://www.typescriptlang.org/)
+[![Angular Material](https://img.shields.io/badge/Angular%20Material-0F0F11?style=for-the-badge&logo=angular&logoColor=DD0031)](https://material.angular.io/)
+[![SignalR](https://img.shields.io/badge/SignalR-0F0F11?style=for-the-badge&logo=signalr&logoColor=white)](https://learn.microsoft.com/aspnet/core/signalr/introduction)
+
 Modern e-commerce frontend built with Angular for the `ecom.API` backend.
 It provides the customer shopping experience and the administrative dashboard in a single UI.
+
+## Overview
+
+This repository contains the frontend of the e-commerce platform.
+It works together with the backend API repository below:
+
+- [ecom.API](https://github.com/melihesensio99/ecom.API)
 
 ## Highlights
 
@@ -30,12 +42,6 @@ It provides the customer shopping experience and the administrative dashboard in
 - JWT authentication
 - SignalR client
 - NgxSpinner, NgxToastr, AlertifyJS
-
-## Backend Repository
-
-The API, database, authentication and business rules are in a separate repository:
-
-- [ecom.API](https://github.com/melihesensio99/ecom.API)
 
 ## Getting Started
 
