@@ -1,5 +1,7 @@
 # ecomClient
 
+![ecomClient banner](assets/readme-banner.svg)
+
 [![Angular](https://img.shields.io/badge/Angular-0F0F11?style=for-the-badge&logo=angular&logoColor=DD0031)](https://angular.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-0F0F11?style=for-the-badge&logo=typescript&logoColor=3178C6)](https://www.typescriptlang.org/)
 [![Angular Material](https://img.shields.io/badge/Angular%20Material-0F0F11?style=for-the-badge&logo=angular&logoColor=DD0031)](https://material.angular.io/)
