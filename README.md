@@ -8,6 +8,8 @@
 Modern e-commerce frontend built with Angular for the `ecom.API` backend.
 It provides the customer shopping experience and the administrative dashboard in a single UI.
 
+> Frontend application for the e-commerce platform. This repo focuses on the UI, while the API, database and business rules live in the backend repository.
+
 ## Overview
 
 This repository contains the frontend of the e-commerce platform.
