@@ -1,107 +1,99 @@
-# 🛒 eticaretClient - Modern Shopping Experience
+# ecomClient
 
-[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Material UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)](https://material.angular.io/)
+Modern e-commerce frontend built with Angular for the `ecom.API` backend.
+It provides the customer shopping experience and the administrative dashboard in a single UI.
 
-A premium, fully-featured e-commerce frontend built with **Angular 14**, providing a seamless and dynamic user experience. This client integrates real-time notifications, secure authentication, and a robust administrative dashboard.
+## Highlights
 
----
+### Customer Experience
+- Product browsing and filtering
+- Basket management
+- Login and registration
+- Order tracking
+- Responsive layout for desktop and mobile
 
-## 🔗 Backend Repository
-> [!IMPORTANT]
-> The backend for this project is managed in a separate repository. You can find the API implementation, database schemas, and business logic here:
-> 
-> **👉 [ecom.API (Backend Repository)](https://github.com/melihesensio99/ecom.API)**
+### Admin Experience
+- Product management
+- Order management
+- User and role management
+- QR code workflows
+- File upload flows
+- Dashboard overview
 
----
+## Tech Stack
 
-## ✨ Key Features
+- Angular 14
+- TypeScript
+- Angular Material
+- RxJS
+- SCSS
+- JWT authentication
+- SignalR client
+- NgxSpinner, NgxToastr, AlertifyJS
 
-### 🛍️ User Interface
-- **Dynamic Product Catalog:** Smooth browsing with advanced filtering and search.
-- **Advanced Basket Management:** Live updates and persistent cart state.
-- **Secure Authentication:** Support for traditional login and **Google OAuth** integration.
-- **Order Tracking:** Real-time status updates via SignalR.
-- **Responsive Design:** Optimized for mobile, tablet, and desktop views.
+## Backend Repository
 
-### 🛡️ Admin Dashboard
-- **Product Management:** Comprehensive CRUD operations with image upload support.
-- **Order Control:** Manage customer orders, update statuses, and track fulfillment.
-- **User & Role Management:** Granular access control for administrators.
-- **Real-time Analytics:** Dashboard overview of store performance.
+The API, database, authentication and business rules are in a separate repository:
 
----
+- [ecom.API](https://github.com/melihesensio99/ecom.API)
 
-## 🛠️ Tech Stack
-
-- **Framework:** Angular 14
-- **State Management:** RxJS
-- **Styling:** SCSS & Angular Material
-- **Real-time:** ASP.NET Core SignalR Client
-- **Authentication:** JWT & Social Login
-- **UI Components:** NgxSpinner, NgxToastr, AlertifyJS
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js (v16+)
+- Node.js 16+
 - Angular CLI
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/melihesensio99/Mini-E-Ticaret-Client.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd ETicaretClient
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   ng serve
-   ```
-5. Open `http://localhost:4200` in your browser.
+### Install and Run
 
----
+```bash
+npm install
+ng serve
+```
 
-## 📸 Preview
+Open `http://localhost:4200` in your browser.
 
-### 🏠 User Facing Pages
+## Project Structure
+
+- `src/app/ui` - customer-facing pages
+- `src/app/admin` - admin dashboard and management pages
+- `src/app/services` - API clients, auth, SignalR and helpers
+- `src/app/contracts` - request and response models
+- `src/app/dialogs` - reusable dialogs
+- `screenshots` - preview images used in this README
+
+## Screenshots
+
+### Home and Catalog
 <p align="center">
-  <img src="screenshots/home.png" width="48%" alt="Home Page" />
-  <img src="screenshots/register.png" width="48%" alt="Register Page" />
-</p>
-<p align="center">
-  <img src="screenshots/login.png" width="48%" alt="Login Page" />
+  <img src="screenshots/home.png" width="48%" alt="Home page" />
+  <img src="screenshots/products.png" width="48%" alt="Product listing page" />
 </p>
 
-### 🛡️ Admin Management
+### Authentication
 <p align="center">
-  <img src="screenshots/dashboard.png" width="100%" alt="Admin Dashboard" />
-</p>
-<p align="center">
-  <img src="screenshots/products.png" width="90%" alt="Products Management" />
+  <img src="screenshots/login.png" width="48%" alt="Login page" />
+  <img src="screenshots/register.png" width="48%" alt="Register page" />
 </p>
 
-### 🛒 Order & Basket System
+### Basket and Checkout
 <p align="center">
-  <img src="screenshots/basket.png" width="48%" alt="Shopping Basket" />
-  <img src="screenshots/address.png" width="48%" alt="Shipping Address" />
+  <img src="screenshots/basket.png" width="48%" alt="Basket page" />
+  <img src="screenshots/address.png" width="48%" alt="Address page" />
 </p>
 
-### ⚙️ Advanced Admin Features
+### Dashboard and Management
 <p align="center">
-  <img src="screenshots/orders.png" width="48%" alt="Order Management" />
-  <img src="screenshots/qrcode.png" width="48%" alt="QR Code Scanning" />
+  <img src="screenshots/dashboard.png" width="100%" alt="Admin dashboard" />
+</p>
+<p align="center">
+  <img src="screenshots/orders.png" width="48%" alt="Orders management" />
+  <img src="screenshots/qrcode.png" width="48%" alt="QR code page" />
 </p>
 
----
+## Notes
 
-Developed by[Melih Esen](https://github.com/melihesensio99)
+This repository contains the frontend only. It expects the backend API to be available from the `ecom.API` repository.
+
+## Author
+
+Developed by [Melih Esen](https://github.com/melihesensio99)
